@@ -13,13 +13,12 @@ class KomaList {
     komaArray[8] = new Niwatori("niwatori", 0, 0, 0, false);
     komaArray[9] = new Niwatori("niwatori", 5, 0, 1, false);
   }
-  
   void draw() {
     for (AbstractKoma k : komaArray) {
       k.draw();
     }
   }
-  AbstractKoma getSelectedKoma() {
+   AbstractKoma getSelectedKoma() {
     for (AbstractKoma k : komaArray) {
       if (k.kStat.selected) return k;
     }
@@ -37,4 +36,5 @@ class KomaList {
     }
     return null;
   }
+  
 }
